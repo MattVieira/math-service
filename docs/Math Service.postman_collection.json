@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "a2f372b3-d96b-4127-bc0c-00932420a360",
+		"name": "Math Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fibonacci",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"n\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{math-host}}/fibonacci",
+					"host": [
+						"{{math-host}}"
+					],
+					"path": [
+						"fibonacci"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ackerman",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"m\": 3,\n    \"n\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{math-host}}/ackermann",
+					"host": [
+						"{{math-host}}"
+					],
+					"path": [
+						"ackermann"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Factorial",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"n\": 14\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{math-host}}/factorial",
+					"host": [
+						"{{math-host}}"
+					],
+					"path": [
+						"factorial"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "math-host",
+			"value": "localhost:8000/math/v1"
+		}
+	]
+}
